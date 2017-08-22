@@ -28,11 +28,11 @@ NSString *const kGPUImageBeautifyFragmentShaderString = SHADER_STRING
  uniform sampler2D inputImageTexture3;
  uniform mediump float smoothDegree;
  
- void main ()
+ void main()
  {
-     highp vec4 bilateral = texture2D(textureCoordinate, inputImageTexture);
-     highp vec4 canny = texture2D(textureCoordinate2, inputImageTexture2);
-     highp vec4 origin = texture2D(textureCoordinate3, inputImageTexture3);
+     highp vec4 bilateral = texture2D(inputImageTexture, textureCoordinate);
+     highp vec4 canny = texture2D(inputImageTexture2, textureCoordinate2);
+     highp vec4 origin = texture2D(inputImageTexture3,textureCoordinate3);
      highp vec4 smooth;
      lowp float r = origin.r;
      lowp float g = origin.g;
@@ -48,7 +48,8 @@ NSString *const kGPUImageBeautifyFragmentShaderString = SHADER_STRING
      smooth.b = log(1.0 + 0.2 * smooth.b)/log(1.2);
      gl_FragColor = smooth;
  }
-);
+ );
+
 
 @implementation GPUImageCombinationFilter
 

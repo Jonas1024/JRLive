@@ -8,5 +8,6 @@ target 'JRLive' do
   # Pods for JRLive
 
 pod ‘GPUImage’
+pod 'YYKit'
 
 end

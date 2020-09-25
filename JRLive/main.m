@@ -2,15 +2,14 @@
 //  main.m
 //  JRLive
 //
-//  Created by fanjianrong on 2017/8/21.
-//  Copyright © 2017年 樊健荣. All rights reserved.
+//  Created by fan on 2020/9/25.
 //
 
-#import <UIKit/UIKit.h>
-#import "JRAppDelegate.h"
+#import <Cocoa/Cocoa.h>
 
-int main(int argc, char * argv[]) {
+int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([JRAppDelegate class]));
+        // Setup code that might create autoreleased objects goes here.
     }
+    return NSApplicationMain(argc, argv);
 }

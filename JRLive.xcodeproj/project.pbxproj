@@ -206,6 +206,7 @@
 		31BB7001251DE74200C0F313 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BB7000251DE74200C0F313 /* libiconv.tbd */; };
 		31BB7004251DE74900C0F313 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BB7003251DE74900C0F313 /* libbz2.tbd */; };
 		31BB7007251DE74E00C0F313 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BB7006251DE74E00C0F313 /* libz.tbd */; };
+		31BB7027251DF47E00C0F313 /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB7022251DF47E00C0F313 /* GPUImageBeautifyFilter.m */; };
 		F8BC606CC6A231FC7200EB28 /* Pods_JRLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B975326EB7A23884A63D414B /* Pods_JRLive.framework */; };
 /* End PBXBuildFile section */
 
@@ -711,6 +712,8 @@
 		31BB7000251DE74200C0F313 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		31BB7003251DE74900C0F313 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		31BB7006251DE74E00C0F313 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		31BB7022251DF47E00C0F313 /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
+		31BB7023251DF47E00C0F313 /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
 		AE42E5C2709077628F934421 /* Pods-JRLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRLive.release.xcconfig"; path = "Target Support Files/Pods-JRLive/Pods-JRLive.release.xcconfig"; sourceTree = "<group>"; };
 		B975326EB7A23884A63D414B /* Pods_JRLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JRLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1153CC80C2BFB13B0C1B53 /* Pods-JRLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRLive.debug.xcconfig"; path = "Target Support Files/Pods-JRLive/Pods-JRLive.debug.xcconfig"; sourceTree = "<group>"; };
@@ -782,6 +785,8 @@
 		31BB6D4A251DE6C900C0F313 /* JRLiveKit */ = {
 			isa = PBXGroup;
 			children = (
+				31BB701D251DF47E00C0F313 /* Live */,
+				31BB7026251DF47E00C0F313 /* Player */,
 				31BB6D4B251DE6C900C0F313 /* Vendor */,
 			);
 			path = JRLiveKit;
@@ -1388,6 +1393,94 @@
 			path = "pili-librtmp";
 			sourceTree = "<group>";
 		};
+		31BB701D251DF47E00C0F313 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				31BB701E251DF47E00C0F313 /* capture */,
+				31BB701F251DF47E00C0F313 /* types */,
+				31BB7020251DF47E00C0F313 /* config */,
+				31BB7021251DF47E00C0F313 /* flitter */,
+				31BB7024251DF47E00C0F313 /* publish */,
+				31BB7025251DF47E00C0F313 /* encode */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		31BB701E251DF47E00C0F313 /* capture */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = capture;
+			sourceTree = "<group>";
+		};
+		31BB701F251DF47E00C0F313 /* types */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = types;
+			sourceTree = "<group>";
+		};
+		31BB7020251DF47E00C0F313 /* config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		31BB7021251DF47E00C0F313 /* flitter */ = {
+			isa = PBXGroup;
+			children = (
+				31BB7022251DF47E00C0F313 /* GPUImageBeautifyFilter.m */,
+				31BB7023251DF47E00C0F313 /* GPUImageBeautifyFilter.h */,
+			);
+			path = flitter;
+			sourceTree = "<group>";
+		};
+		31BB7024251DF47E00C0F313 /* publish */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = publish;
+			sourceTree = "<group>";
+		};
+		31BB7025251DF47E00C0F313 /* encode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = encode;
+			sourceTree = "<group>";
+		};
+		31BB7026251DF47E00C0F313 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				31BB7029251DF4A200C0F313 /* parse */,
+				31BB702A251DF4B000C0F313 /* decode */,
+				31BB702B251DF4C400C0F313 /* render */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		31BB7029251DF4A200C0F313 /* parse */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = parse;
+			sourceTree = "<group>";
+		};
+		31BB702A251DF4B000C0F313 /* decode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = decode;
+			sourceTree = "<group>";
+		};
+		31BB702B251DF4C400C0F313 /* render */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = render;
+			sourceTree = "<group>";
+		};
 		ACC285BF8D866660A75DE632 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1526,6 +1619,7 @@
 				31BB6F64251DE6CD00C0F313 /* GPUImageSketchFilter.m in Sources */,
 				31BB6FE8251DE6CD00C0F313 /* GPUImageColourFASTSamplingOperation.m in Sources */,
 				31BB6FB2251DE6CD00C0F313 /* GPUImageContrastFilter.m in Sources */,
+				31BB7027251DF47E00C0F313 /* GPUImageBeautifyFilter.m in Sources */,
 				31BB6F62251DE6CD00C0F313 /* GPUImageVignetteFilter.m in Sources */,
 				31BB6FDB251DE6CD00C0F313 /* GPUImageCrosshatchFilter.m in Sources */,
 				31BB6FE0251DE6CD00C0F313 /* GPUImageExposureFilter.m in Sources */,

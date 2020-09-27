@@ -207,6 +207,18 @@
 		31BB7004251DE74900C0F313 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BB7003251DE74900C0F313 /* libbz2.tbd */; };
 		31BB7007251DE74E00C0F313 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BB7006251DE74E00C0F313 /* libz.tbd */; };
 		31BB7027251DF47E00C0F313 /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB7022251DF47E00C0F313 /* GPUImageBeautifyFilter.m */; };
+		31BB7033251DF8D700C0F313 /* JRVideoCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB7032251DF8D700C0F313 /* JRVideoCapture.m */; };
+		31BB703A251DF9F000C0F313 /* JRGPUImageEmptyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB7036251DF9EE00C0F313 /* JRGPUImageEmptyFilter.m */; };
+		31BB703B251DF9F000C0F313 /* JRGPUImageBeautyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB7039251DF9F000C0F313 /* JRGPUImageBeautyFilter.m */; };
+		31BB7041251DFAC200C0F313 /* JRLiveVideoConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB7040251DFAC200C0F313 /* JRLiveVideoConfiguration.m */; };
+		31BB7046252032F600C0F313 /* JRAudioCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB7045252032F600C0F313 /* JRAudioCapture.m */; };
+		31BB704A2520331800C0F313 /* JRLiveAudioConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB70492520331800C0F313 /* JRLiveAudioConfiguration.m */; };
+		31BB705225203A7800C0F313 /* JRFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB705125203A7800C0F313 /* JRFrame.m */; };
+		31BB705625203A9400C0F313 /* JRAudioFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB705525203A9400C0F313 /* JRAudioFrame.m */; };
+		31BB705A25203AC700C0F313 /* JRLiveDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB705925203AC700C0F313 /* JRLiveDebug.m */; };
+		31BB705E25203AEE00C0F313 /* JRLiveStreamInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB705D25203AEE00C0F313 /* JRLiveStreamInfo.m */; };
+		31BB706225203B5100C0F313 /* JRVideoFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB706125203B5100C0F313 /* JRVideoFrame.m */; };
+		31BB706A25203C1300C0F313 /* JRHardwareAudioEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB706925203C1300C0F313 /* JRHardwareAudioEncoder.m */; };
 		F8BC606CC6A231FC7200EB28 /* Pods_JRLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B975326EB7A23884A63D414B /* Pods_JRLive.framework */; };
 /* End PBXBuildFile section */
 
@@ -714,6 +726,34 @@
 		31BB7006251DE74E00C0F313 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		31BB7022251DF47E00C0F313 /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
 		31BB7023251DF47E00C0F313 /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
+		31BB7031251DF8D700C0F313 /* JRVideoCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRVideoCapture.h; sourceTree = "<group>"; };
+		31BB7032251DF8D700C0F313 /* JRVideoCapture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRVideoCapture.m; sourceTree = "<group>"; };
+		31BB7036251DF9EE00C0F313 /* JRGPUImageEmptyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRGPUImageEmptyFilter.m; sourceTree = "<group>"; };
+		31BB7037251DF9EF00C0F313 /* JRGPUImageBeautyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRGPUImageBeautyFilter.h; sourceTree = "<group>"; };
+		31BB7038251DF9EF00C0F313 /* JRGPUImageEmptyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRGPUImageEmptyFilter.h; sourceTree = "<group>"; };
+		31BB7039251DF9F000C0F313 /* JRGPUImageBeautyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRGPUImageBeautyFilter.m; sourceTree = "<group>"; };
+		31BB703F251DFAC200C0F313 /* JRLiveVideoConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRLiveVideoConfiguration.h; sourceTree = "<group>"; };
+		31BB7040251DFAC200C0F313 /* JRLiveVideoConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRLiveVideoConfiguration.m; sourceTree = "<group>"; };
+		31BB7044252032F600C0F313 /* JRAudioCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRAudioCapture.h; sourceTree = "<group>"; };
+		31BB7045252032F600C0F313 /* JRAudioCapture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRAudioCapture.m; sourceTree = "<group>"; };
+		31BB70482520331800C0F313 /* JRLiveAudioConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRLiveAudioConfiguration.h; sourceTree = "<group>"; };
+		31BB70492520331800C0F313 /* JRLiveAudioConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRLiveAudioConfiguration.m; sourceTree = "<group>"; };
+		31BB704C25203A2700C0F313 /* JRAudioEncoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRAudioEncoding.h; sourceTree = "<group>"; };
+		31BB705025203A7800C0F313 /* JRFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRFrame.h; sourceTree = "<group>"; };
+		31BB705125203A7800C0F313 /* JRFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRFrame.m; sourceTree = "<group>"; };
+		31BB705425203A9400C0F313 /* JRAudioFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRAudioFrame.h; sourceTree = "<group>"; };
+		31BB705525203A9400C0F313 /* JRAudioFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRAudioFrame.m; sourceTree = "<group>"; };
+		31BB705825203AC700C0F313 /* JRLiveDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRLiveDebug.h; sourceTree = "<group>"; };
+		31BB705925203AC700C0F313 /* JRLiveDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRLiveDebug.m; sourceTree = "<group>"; };
+		31BB705C25203AEE00C0F313 /* JRLiveStreamInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRLiveStreamInfo.h; sourceTree = "<group>"; };
+		31BB705D25203AEE00C0F313 /* JRLiveStreamInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRLiveStreamInfo.m; sourceTree = "<group>"; };
+		31BB706025203B5100C0F313 /* JRVideoFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRVideoFrame.h; sourceTree = "<group>"; };
+		31BB706125203B5100C0F313 /* JRVideoFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRVideoFrame.m; sourceTree = "<group>"; };
+		31BB706825203C1300C0F313 /* JRHardwareAudioEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRHardwareAudioEncoder.h; sourceTree = "<group>"; };
+		31BB706925203C1300C0F313 /* JRHardwareAudioEncoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRHardwareAudioEncoder.m; sourceTree = "<group>"; };
+		31BB706C252044E500C0F313 /* JRVideoEncoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRVideoEncoding.h; sourceTree = "<group>"; };
+		31C5AABA2520664400CFD60E /* JRHardwareVideoEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRHardwareVideoEncoder.h; sourceTree = "<group>"; };
+		31C5AABB2520664400CFD60E /* JRHardwareVideoEncoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRHardwareVideoEncoder.m; sourceTree = "<group>"; };
 		AE42E5C2709077628F934421 /* Pods-JRLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRLive.release.xcconfig"; path = "Target Support Files/Pods-JRLive/Pods-JRLive.release.xcconfig"; sourceTree = "<group>"; };
 		B975326EB7A23884A63D414B /* Pods_JRLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JRLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1153CC80C2BFB13B0C1B53 /* Pods-JRLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRLive.debug.xcconfig"; path = "Target Support Files/Pods-JRLive/Pods-JRLive.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1409,6 +1449,10 @@
 		31BB701E251DF47E00C0F313 /* capture */ = {
 			isa = PBXGroup;
 			children = (
+				31BB7031251DF8D700C0F313 /* JRVideoCapture.h */,
+				31BB7032251DF8D700C0F313 /* JRVideoCapture.m */,
+				31BB7044252032F600C0F313 /* JRAudioCapture.h */,
+				31BB7045252032F600C0F313 /* JRAudioCapture.m */,
 			);
 			path = capture;
 			sourceTree = "<group>";
@@ -1416,6 +1460,16 @@
 		31BB701F251DF47E00C0F313 /* types */ = {
 			isa = PBXGroup;
 			children = (
+				31BB705025203A7800C0F313 /* JRFrame.h */,
+				31BB705125203A7800C0F313 /* JRFrame.m */,
+				31BB705425203A9400C0F313 /* JRAudioFrame.h */,
+				31BB705525203A9400C0F313 /* JRAudioFrame.m */,
+				31BB705825203AC700C0F313 /* JRLiveDebug.h */,
+				31BB705925203AC700C0F313 /* JRLiveDebug.m */,
+				31BB705C25203AEE00C0F313 /* JRLiveStreamInfo.h */,
+				31BB705D25203AEE00C0F313 /* JRLiveStreamInfo.m */,
+				31BB706025203B5100C0F313 /* JRVideoFrame.h */,
+				31BB706125203B5100C0F313 /* JRVideoFrame.m */,
 			);
 			path = types;
 			sourceTree = "<group>";
@@ -1423,6 +1477,10 @@
 		31BB7020251DF47E00C0F313 /* config */ = {
 			isa = PBXGroup;
 			children = (
+				31BB703F251DFAC200C0F313 /* JRLiveVideoConfiguration.h */,
+				31BB7040251DFAC200C0F313 /* JRLiveVideoConfiguration.m */,
+				31BB70482520331800C0F313 /* JRLiveAudioConfiguration.h */,
+				31BB70492520331800C0F313 /* JRLiveAudioConfiguration.m */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -1430,8 +1488,12 @@
 		31BB7021251DF47E00C0F313 /* flitter */ = {
 			isa = PBXGroup;
 			children = (
-				31BB7022251DF47E00C0F313 /* GPUImageBeautifyFilter.m */,
 				31BB7023251DF47E00C0F313 /* GPUImageBeautifyFilter.h */,
+				31BB7022251DF47E00C0F313 /* GPUImageBeautifyFilter.m */,
+				31BB7037251DF9EF00C0F313 /* JRGPUImageBeautyFilter.h */,
+				31BB7039251DF9F000C0F313 /* JRGPUImageBeautyFilter.m */,
+				31BB7038251DF9EF00C0F313 /* JRGPUImageEmptyFilter.h */,
+				31BB7036251DF9EE00C0F313 /* JRGPUImageEmptyFilter.m */,
 			);
 			path = flitter;
 			sourceTree = "<group>";
@@ -1446,6 +1508,12 @@
 		31BB7025251DF47E00C0F313 /* encode */ = {
 			isa = PBXGroup;
 			children = (
+				31BB704C25203A2700C0F313 /* JRAudioEncoding.h */,
+				31BB706825203C1300C0F313 /* JRHardwareAudioEncoder.h */,
+				31BB706925203C1300C0F313 /* JRHardwareAudioEncoder.m */,
+				31BB706C252044E500C0F313 /* JRVideoEncoding.h */,
+				31C5AABA2520664400CFD60E /* JRHardwareVideoEncoder.h */,
+				31C5AABB2520664400CFD60E /* JRHardwareVideoEncoder.m */,
 			);
 			path = encode;
 			sourceTree = "<group>";
@@ -1615,10 +1683,12 @@
 				31BB6F5A251DE6CD00C0F313 /* GPUImageMovie.m in Sources */,
 				31BB6F95251DE6CD00C0F313 /* GPUImageColorDodgeBlendFilter.m in Sources */,
 				31BB6FD8251DE6CD00C0F313 /* GPUImageDilationFilter.m in Sources */,
+				31BB706225203B5100C0F313 /* JRVideoFrame.m in Sources */,
 				31BB6F84251DE6CD00C0F313 /* GPUImage3x3TextureSamplingFilter.m in Sources */,
 				31BB6F64251DE6CD00C0F313 /* GPUImageSketchFilter.m in Sources */,
 				31BB6FE8251DE6CD00C0F313 /* GPUImageColourFASTSamplingOperation.m in Sources */,
 				31BB6FB2251DE6CD00C0F313 /* GPUImageContrastFilter.m in Sources */,
+				31BB703B251DF9F000C0F313 /* JRGPUImageBeautyFilter.m in Sources */,
 				31BB7027251DF47E00C0F313 /* GPUImageBeautifyFilter.m in Sources */,
 				31BB6F62251DE6CD00C0F313 /* GPUImageVignetteFilter.m in Sources */,
 				31BB6FDB251DE6CD00C0F313 /* GPUImageCrosshatchFilter.m in Sources */,
@@ -1627,6 +1697,7 @@
 				31BB6F5B251DE6CD00C0F313 /* GPUImageLevelsFilter.m in Sources */,
 				31BB6FD2251DE6CD00C0F313 /* GPUImagePerlinNoiseFilter.m in Sources */,
 				31BB6F81251DE6CD00C0F313 /* GPUImageCropFilter.m in Sources */,
+				31BB7041251DFAC200C0F313 /* JRLiveVideoConfiguration.m in Sources */,
 				31BB6F9D251DE6CD00C0F313 /* GPUImageContext.m in Sources */,
 				31BB6F8E251DE6CD00C0F313 /* GPUImageOutput.m in Sources */,
 				31BB6FB1251DE6CD00C0F313 /* GPUImageRGBDilationFilter.m in Sources */,
@@ -1651,6 +1722,7 @@
 				31BB6FBB251DE6CD00C0F313 /* GPUImageShiTomasiFeatureDetectionFilter.m in Sources */,
 				31BB6F6E251DE6CD00C0F313 /* GPUImageGammaFilter.m in Sources */,
 				31BB6FCF251DE6CD00C0F313 /* GPUImageMotionBlurFilter.m in Sources */,
+				31BB7033251DF8D700C0F313 /* JRVideoCapture.m in Sources */,
 				31BB6F4A251DE6CD00C0F313 /* GPUImageFourInputFilter.m in Sources */,
 				31BB6FC3251DE6CD00C0F313 /* GPUImageMonochromeFilter.m in Sources */,
 				31BB6FD7251DE6CD00C0F313 /* GPUImageNormalBlendFilter.m in Sources */,
@@ -1699,6 +1771,7 @@
 				31BB6F7E251DE6CD00C0F313 /* GPUImageDissolveBlendFilter.m in Sources */,
 				31BB6FB7251DE6CD00C0F313 /* GPUImageSmoothToonFilter.m in Sources */,
 				31BB6FB6251DE6CD00C0F313 /* GPUImageColorLocalBinaryPatternFilter.m in Sources */,
+				31BB705E25203AEE00C0F313 /* JRLiveStreamInfo.m in Sources */,
 				31BB6FC7251DE6CD00C0F313 /* GPUImageDirectionalNonMaximumSuppressionFilter.m in Sources */,
 				31BB6F75251DE6CD00C0F313 /* GPUImageHarrisCornerDetectionFilter.m in Sources */,
 				31BB6F6A251DE6CD00C0F313 /* GPUImageAmatorkaFilter.m in Sources */,
@@ -1732,9 +1805,11 @@
 				31BB6FE4251DE6CD00C0F313 /* GPUImageFalseColorFilter.m in Sources */,
 				31BB6F7D251DE6CD00C0F313 /* GPUImageToonFilter.m in Sources */,
 				31BB6FAA251DE6CD00C0F313 /* GPUImageSwirlFilter.m in Sources */,
+				31BB703A251DF9F000C0F313 /* JRGPUImageEmptyFilter.m in Sources */,
 				31BB6FC8251DE6CD00C0F313 /* GPUImageLinearBurnBlendFilter.m in Sources */,
 				31BB6FA7251DE6CD00C0F313 /* GPUImageGaussianSelectiveBlurFilter.m in Sources */,
 				31BB6F74251DE6CD00C0F313 /* GPUImageSkinToneFilter.m in Sources */,
+				31BB706A25203C1300C0F313 /* JRHardwareAudioEncoder.m in Sources */,
 				31BB6F44251DE6CD00C0F313 /* GPUImageTwoPassTextureSamplingFilter.m in Sources */,
 				31BB6FE7251DE6CD00C0F313 /* GPUImageLookupFilter.m in Sources */,
 				31BB6FF1251DE6CD00C0F313 /* rtmp.c in Sources */,
@@ -1742,12 +1817,14 @@
 				31BB6F5E251DE6CD00C0F313 /* GPUImageFASTCornerDetectionFilter.m in Sources */,
 				31BB6F96251DE6CD00C0F313 /* GPUImageFramebuffer.m in Sources */,
 				31BB6F57251DE6CD00C0F313 /* GPUImageEmbossFilter.m in Sources */,
+				31BB7046252032F600C0F313 /* JRAudioCapture.m in Sources */,
 				31BB6F8C251DE6CD00C0F313 /* GPUImageStretchDistortionFilter.m in Sources */,
 				31BB6FEC251DE6CD00C0F313 /* GPUImageLightenBlendFilter.m in Sources */,
 				31BB6FCC251DE6CD00C0F313 /* GPUImageScreenBlendFilter.m in Sources */,
 				31BB6FA1251DE6CD00C0F313 /* GPUImageView.m in Sources */,
 				31BB6F4D251DE6CD00C0F313 /* GPUImageHighPassFilter.m in Sources */,
 				31BB6FBC251DE6CD00C0F313 /* GPUImageBuffer.m in Sources */,
+				31BB704A2520331800C0F313 /* JRLiveAudioConfiguration.m in Sources */,
 				31BB6F61251DE6CD00C0F313 /* GPUImagePixellatePositionFilter.m in Sources */,
 				31BB6F8A251DE6CD00C0F313 /* GPUImageBrightnessFilter.m in Sources */,
 				31BB6FC2251DE6CD00C0F313 /* GPUImageLowPassFilter.m in Sources */,
@@ -1757,6 +1834,7 @@
 				31BB6F54251DE6CD00C0F313 /* GPUImageUIElement.m in Sources */,
 				31BB6F4B251DE6CD00C0F313 /* GPUImageParallelCoordinateLineTransformFilter.m in Sources */,
 				31BB6F4E251DE6CD00C0F313 /* GPUImageSoftEleganceFilter.m in Sources */,
+				31BB705625203A9400C0F313 /* JRAudioFrame.m in Sources */,
 				31BB6F60251DE6CD00C0F313 /* GPUImageMissEtikateFilter.m in Sources */,
 				31BB6F4F251DE6CD00C0F313 /* GPUImageTwoPassFilter.m in Sources */,
 				31BB6F48251DE6CD00C0F313 /* GPUImageLuminanceThresholdFilter.m in Sources */,
@@ -1765,6 +1843,7 @@
 				31BB6F66251DE6CD00C0F313 /* GPUImageJFAVoronoiFilter.m in Sources */,
 				31BB6FB4251DE6CD00C0F313 /* GPUImageHalftoneFilter.m in Sources */,
 				31BB6F63251DE6CD00C0F313 /* GPUImageHistogramEqualizationFilter.m in Sources */,
+				31BB705225203A7800C0F313 /* JRFrame.m in Sources */,
 				31BB6F52251DE6CD00C0F313 /* GPUImageHighlightShadowTintFilter.m in Sources */,
 				31BB6F9B251DE6CD00C0F313 /* GPUImageFramebufferCache.m in Sources */,
 				31BB6F5D251DE6CD00C0F313 /* GPUImageSolarizeFilter.m in Sources */,
@@ -1776,6 +1855,7 @@
 				31BB6F51251DE6CD00C0F313 /* GPUImageColorPackingFilter.m in Sources */,
 				31BB6FE2251DE6CD00C0F313 /* GPUImageLuminanceRangeFilter.m in Sources */,
 				31BB6F9F251DE6CD00C0F313 /* GPUImagePicture.m in Sources */,
+				31BB705A25203AC700C0F313 /* JRLiveDebug.m in Sources */,
 				31BB6F59251DE6CD00C0F313 /* GPUImageGrayscaleFilter.m in Sources */,
 				31BB6F88251DE6CD00C0F313 /* GPUImageLineGenerator.m in Sources */,
 				31BB6FF2251DE6CD00C0F313 /* error.c in Sources */,
@@ -1931,6 +2011,7 @@
 				DEVELOPMENT_TEAM = NPF59QP72V;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/JRLiveKit/Vendor/FFmpeg/include\"";
 				INFOPLIST_FILE = JRLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1955,6 +2036,7 @@
 				DEVELOPMENT_TEAM = NPF59QP72V;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/JRLiveKit/Vendor/FFmpeg/include\"";
 				INFOPLIST_FILE = JRLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -6,7 +6,7 @@
 //  Copyright © 2017年 樊健荣. All rights reserved.
 //
 
-#import <GPUImage/GPUImage.h>
+#import "GPUImage.h"
 
 @class GPUImageCombinationFilter;
 

@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "JRHardwareVideoEncoder.h"
 @interface AppDelegate ()
 
 @end
@@ -15,6 +15,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[JRHardwareVideoEncoder alloc] init];
     // Override point for customization after application launch.
     return YES;
 }

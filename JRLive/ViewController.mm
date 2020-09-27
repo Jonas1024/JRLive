@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-
+#import "JRHardwareVideoEncoder.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -25,8 +25,8 @@ extern "C" {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     av_register_all();
+//    [[JRHardwareVideoEncoder alloc] init];
 }
 
 

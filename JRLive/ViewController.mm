@@ -6,16 +6,9 @@
 //
 
 #import "ViewController.h"
-#import "JRHardwareVideoEncoder.h"
-#ifdef __cplusplus
-extern "C" {
-#endif
-    
-#include "libavformat/avformat.h"
-    
-#ifdef __cplusplus
-};
-#endif
+#import "JRLivePreview.h"
+
+
 
 @interface ViewController ()
 
@@ -23,10 +16,12 @@ extern "C" {
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    av_register_all();
-//    [[JRHardwareVideoEncoder alloc] init];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.view addSubview:[[JRLivePreview alloc] initWithFrame:self.view.bounds]];
+    });
 }
 
 

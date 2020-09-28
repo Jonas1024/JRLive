@@ -123,7 +123,7 @@ SAVC(mp4a);
         PILI_RTMP_Close(_rtmp, &_error);
         PILI_RTMP_Free(_rtmp);
     }
-    
+    [self RTMP264_Connect:(char *)[_stream.url cStringUsingEncoding:NSASCIIStringEncoding]];
 }
 
 - (void)stop {

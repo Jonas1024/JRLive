@@ -67,8 +67,25 @@
         memset(totalBuf, (int)leftBuf, leftLength);
         memset(totalBuf + leftLength, (int)audioData.bytes, audioData.length);
         
+        for(NSInteger index = 0;index < encodeCount;index++){
+            [self encodeBuffer:p  timeStamp:timeStamp];
+            p += self.configuration.bufferLength;
+        }
         
+        leftLength = totalSize%self.configuration.bufferLength;
+        memset(leftBuf, 0, self.configuration.bufferLength);
+        memcpy(leftBuf, totalBuf + (totalSize -leftLength), leftLength);
+        
+        free(totalBuf);
+    } else {
+        ///< 积累
+        memcpy(leftBuf+leftLength, audioData.bytes, audioData.length);
+        leftLength = leftLength + audioData.length;
     }
+}
+
+- (void)setDelegate:(id<JRAudioEncodingDelegate>)delegate {
+    _aacDeleage = delegate;
 }
 
 - (void)encodeBuffer:(char*)buf timeStamp:(uint64_t)timeStamp

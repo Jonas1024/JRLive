@@ -117,6 +117,11 @@
     
 }
 
+- (void)setDelegate:(id<JRVideoEncodingDelegate>)delegate
+{
+    _h264Delegate = delegate;
+}
+
 - (void)stopEncoder {
     VTCompressionSessionCompleteFrames(compressionSession, kCMTimeIndefinite);
 }

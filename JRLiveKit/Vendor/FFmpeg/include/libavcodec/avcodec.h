@@ -715,7 +715,7 @@ enum AVCodecID {
  */
 typedef struct AVCodecDescriptor {
     enum AVCodecID     id;
-    enum AVMediaType type;
+    enum FFAVMediaType type;
     /**
      * Name of the codec described by this descriptor. It is non-empty and
      * unique for each codec descriptor. It should contain alphanumeric
@@ -1570,7 +1570,7 @@ typedef struct AVCodecContext {
     const AVClass *av_class;
     int log_level_offset;
 
-    enum AVMediaType codec_type; /* see AVMEDIA_TYPE_xxx */
+    enum FFAVMediaType codec_type; /* see AVMEDIA_TYPE_xxx */
     const struct AVCodec  *codec;
     enum AVCodecID     codec_id; /* see AV_CODEC_ID_xxx */
 
@@ -3491,7 +3491,7 @@ typedef struct AVCodec {
      * You should use the NULL_IF_CONFIG_SMALL() macro to define it.
      */
     const char *long_name;
-    enum AVMediaType type;
+    enum FFAVMediaType type;
     enum AVCodecID id;
     /**
      * Codec capabilities.
@@ -3659,7 +3659,7 @@ typedef struct AVHWAccel {
      *
      * See AVMEDIA_TYPE_xxx
      */
-    enum AVMediaType type;
+    enum FFAVMediaType type;
 
     /**
      * Codec implemented by the hardware accelerator.
@@ -3950,7 +3950,7 @@ typedef struct AVCodecParameters {
     /**
      * General type of the encoded data.
      */
-    enum AVMediaType codec_type;
+    enum FFAVMediaType codec_type;
     /**
      * Specific type of the encoded data (the codec used).
      */
@@ -6166,7 +6166,7 @@ int av_lockmgr_register(int (*cb)(void **mutex, enum AVLockOp op));
 /**
  * Get the type of the given codec.
  */
-enum AVMediaType avcodec_get_type(enum AVCodecID codec_id);
+enum FFAVMediaType avcodec_get_type(enum AVCodecID codec_id);
 
 /**
  * Get the name of a codec.

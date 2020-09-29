@@ -27,8 +27,6 @@ JRHardwareVideoDecoderDelegate,
 JRHardwareAudioDecoderDelegate
 >
 
-@property (nonatomic, strong) UIView *preview;
-
 @property (nonatomic, strong) JRStreamPuller *puller;
 
 @property (nonatomic, strong) JRFFmpegAudioDecoder *ffAudioDecoder;
@@ -47,14 +45,17 @@ JRHardwareAudioDecoderDelegate
 
 @property (nonatomic, assign) BOOL isFindIDR;
 
+@property (nonatomic, assign) CGRect frame;
+
 @end
 
 @implementation JRLivePlayer
 
-- (instancetype)init
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super init];
     if (self) {
+        self.frame = frame;
         self.isUseFFmpeg = YES;
     }
     return self;
@@ -86,7 +87,7 @@ JRHardwareAudioDecoderDelegate
         self.hwVideoDecoder.delegate = self;
     }
     
-    self.playerView = [[JRPlayerView alloc] init];
+    self.playerView = [[JRPlayerView alloc] initWithFrame:self.frame];
     
     [self configureAudioPlayer];
 }
@@ -99,6 +100,11 @@ JRHardwareAudioDecoderDelegate
 - (void)stopPlayer
 {
     
+}
+
+- (UIView *)preview
+{
+    return self.playerView;
 }
 
 #pragma mark - config
@@ -232,70 +238,6 @@ JRHardwareAudioDecoderDelegate
     
     NSLog(@"Test Data in ,  work size = %d, free size = %d !",audioBufferQueue->m_work_queue->size, audioBufferQueue->m_free_queue->size);
 }
-
-#pragma mark - getter & setter
-
-- (JRStreamPuller *)puller
-{
-    if (!_puller) {
-        _puller = [[JRStreamPuller alloc] init];
-        _puller.delegate = self;
-    }
-    return  _puller;
-}
-
--(JRFFmpegAudioDecoder *)ffAudioDecoder
-{
-    if (!_ffAudioDecoder) {
-        _ffAudioDecoder = [[JRFFmpegAudioDecoder alloc] init];
-        _ffAudioDecoder.delegate = self;
-    }
-    return  _ffAudioDecoder;
-}
-
-- (JRFFmpegVideoDecoder *)ffVideoDecoder
-{
-    if (!_ffVideoDecoder) {
-        _ffVideoDecoder = [[JRFFmpegVideoDecoder alloc] init];
-        _ffVideoDecoder.delegate = self;
-    }
-    return  _ffVideoDecoder;
-}
-
-- (JRHardwareAudioDecoder *)hwAudioDecoder
-{
-    if (!_hwAudioDecoder) {
-        _hwAudioDecoder = [[JRHardwareAudioDecoder alloc] init];
-        _hwAudioDecoder.delegate = self;
-    }
-    return  _hwAudioDecoder;
-}
-
-- (JRHardwareVideoDecoder *)hwVideoDecoder
-{
-    if (!_hwVideoDecoder) {
-        _hwVideoDecoder = [[JRHardwareVideoDecoder alloc] init];
-        _hwVideoDecoder.delegate = self;
-    }
-    return  _hwVideoDecoder;
-}
-
-- (JRPlayerView *)playerView
-{
-    if (!_playerView) {
-        _playerView = [[JRPlayerView alloc] init];
-    }
-    return  _playerView;
-}
-
-- (JRAudioQueuePlayer *)audioPlayer
-{
-    if (!_audioPlayer) {
-        _audioPlayer = [[JRAudioQueuePlayer alloc] init];
-    }
-    return  _audioPlayer;
-}
-
 
 
 @end

@@ -6,6 +6,8 @@ varying vec2 textureCoordinate;
 
 void main()
 {
-    gl_Position = position;
+    vec4 p = position;
+    p.x = -p.x;
+    gl_Position = p;
     textureCoordinate = inputTextureCoordinate;
 }

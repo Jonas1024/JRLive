@@ -7,24 +7,11 @@
 
 #import "ViewController.h"
 #import "JRLivePreview.h"
-
-// FFmpeg Header File
-#ifdef __cplusplus
-extern "C" {
-#endif
-    
-#include "libavformat/avformat.h"
-#include "libavcodec/avcodec.h"
-#include "libavutil/avutil.h"
-#include "libswscale/swscale.h"
-#include "libswresample/swresample.h"
-#include "libavutil/opt.h"
-    
-#ifdef __cplusplus
-};
-#endif
+#import "JRLivePlayer.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) JRLivePlayer *livePlayer;
 
 @end
 
@@ -34,10 +21,19 @@ extern "C" {
 {
     [super viewDidLoad];
     
-    av_register_all();
+    self.view.backgroundColor = [UIColor lightGrayColor];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.view addSubview:[[JRLivePreview alloc] initWithFrame:self.view.bounds]];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self.view addSubview:[[JRLivePreview alloc] initWithFrame:self.view.bounds]];
+//    });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.livePlayer = [[JRLivePlayer alloc] initWithFrame:self.view.bounds];
+        [self.livePlayer configWithURLString:@"rtmp://live.dajiufan.com/live/live"];
+        [self.view addSubview:self.livePlayer.preview];
+        self.livePlayer.preview.frame = self.view.bounds;
+        
+        [self.livePlayer startPlayer];
     });
 }
 

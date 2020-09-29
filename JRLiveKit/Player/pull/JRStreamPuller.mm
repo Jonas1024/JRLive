@@ -83,6 +83,21 @@ static int GetAVStreamFPSTimeBase(AVStream *st) {
     }
 }
 
+- (AVFormatContext *)getFormatContext
+{
+    return m_formatContext;
+}
+
+- (int)getVideoStreamIndex
+{
+    return m_videoStreamIndex;
+}
+
+- (int)getAudioStreamIndex
+{
+    return m_audioStreamIndex;
+}
+
 #pragma mark -
 
 - (void)startHardware
@@ -292,10 +307,10 @@ static int GetAVStreamFPSTimeBase(AVStream *st) {
     AVFormatContext  *formatContext = NULL;
     AVDictionary     *opts          = NULL;
     
-    av_dict_set(&opts, "timeout", "1000000", 0);//设置超时1秒
+    av_dict_set(&opts, "timeout", "3000000", 0);//设置超时1秒
     
     formatContext = avformat_alloc_context();
-    BOOL isSuccess = avformat_open_input(&formatContext, [self.urlString UTF8String], NULL, &opts) < 0 ? NO : YES;
+    BOOL isSuccess = avformat_open_input(&formatContext, [self.urlString UTF8String], NULL,NULL) < 0 ? NO : YES;
     av_dict_free(&opts);
     
     if (!isSuccess) {

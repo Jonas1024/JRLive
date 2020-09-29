@@ -11,6 +11,8 @@
 
 @property (nonatomic, strong, readonly) UIView *preview;
 
+- (instancetype)initWithFrame:(CGRect)frame;
+
 - (void)configWithURLString:(NSString *)urlString;
 
 - (void)startPlayer;

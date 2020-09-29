@@ -17,6 +17,14 @@
 		3158EFED2521D9A20095B647 /* JRLivePlayerTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3158EFEC2521D9A20095B647 /* JRLivePlayerTypes.m */; };
 		3158EFF52521E7110095B647 /* JRHardwareAudioDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3158EFF42521E7110095B647 /* JRHardwareAudioDecoder.m */; };
 		3158EFFA2521E7320095B647 /* JRFFmpegAudioDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3158EFF92521E7320095B647 /* JRFFmpegAudioDecoder.m */; };
+		3158F0012522D3200095B647 /* JRSortFrameHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3158F0002522D3200095B647 /* JRSortFrameHandler.mm */; };
+		3158F0092522D66D0095B647 /* JRPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3158F0082522D66D0095B647 /* JRPlayerView.m */; };
+		3158F0102522DBB70095B647 /* JRPreviewNV12Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 3158F00C2522DBB70095B647 /* JRPreviewNV12Shader.vsh */; };
+		3158F0112522DBB70095B647 /* JRPreviewRGBShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 3158F00D2522DBB70095B647 /* JRPreviewRGBShader.fsh */; };
+		3158F0122522DBB70095B647 /* JRPreviewNV12Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 3158F00E2522DBB70095B647 /* JRPreviewNV12Shader.fsh */; };
+		3158F0132522DBB70095B647 /* JRPreviewRGBShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 3158F00F2522DBB70095B647 /* JRPreviewRGBShader.vsh */; };
+		3158F01B2522DD000095B647 /* JRQueueProcess.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3158F01A2522DD000095B647 /* JRQueueProcess.mm */; };
+		3158F0202522E3F20095B647 /* JRAudioQueuePlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3158F01F2522E3F20095B647 /* JRAudioQueuePlayer.mm */; };
 		31BB6D30251DE66700C0F313 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB6D2F251DE66700C0F313 /* AppDelegate.m */; };
 		31BB6D33251DE66700C0F313 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB6D32251DE66700C0F313 /* SceneDelegate.m */; };
 		31BB6D36251DE66700C0F313 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31BB6D35251DE66700C0F313 /* ViewController.mm */; };
@@ -259,6 +267,18 @@
 		3158EFF42521E7110095B647 /* JRHardwareAudioDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRHardwareAudioDecoder.m; sourceTree = "<group>"; };
 		3158EFF82521E7320095B647 /* JRFFmpegAudioDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRFFmpegAudioDecoder.h; sourceTree = "<group>"; };
 		3158EFF92521E7320095B647 /* JRFFmpegAudioDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRFFmpegAudioDecoder.m; sourceTree = "<group>"; };
+		3158EFFF2522D3200095B647 /* JRSortFrameHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRSortFrameHandler.h; sourceTree = "<group>"; };
+		3158F0002522D3200095B647 /* JRSortFrameHandler.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = JRSortFrameHandler.mm; sourceTree = "<group>"; };
+		3158F0072522D66D0095B647 /* JRPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRPlayerView.h; sourceTree = "<group>"; };
+		3158F0082522D66D0095B647 /* JRPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRPlayerView.m; sourceTree = "<group>"; };
+		3158F00C2522DBB70095B647 /* JRPreviewNV12Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = JRPreviewNV12Shader.vsh; sourceTree = "<group>"; };
+		3158F00D2522DBB70095B647 /* JRPreviewRGBShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = JRPreviewRGBShader.fsh; sourceTree = "<group>"; };
+		3158F00E2522DBB70095B647 /* JRPreviewNV12Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = JRPreviewNV12Shader.fsh; sourceTree = "<group>"; };
+		3158F00F2522DBB70095B647 /* JRPreviewRGBShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = JRPreviewRGBShader.vsh; sourceTree = "<group>"; };
+		3158F0192522DD000095B647 /* JRQueueProcess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRQueueProcess.h; sourceTree = "<group>"; };
+		3158F01A2522DD000095B647 /* JRQueueProcess.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = JRQueueProcess.mm; sourceTree = "<group>"; };
+		3158F01E2522E3F20095B647 /* JRAudioQueuePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRAudioQueuePlayer.h; sourceTree = "<group>"; };
+		3158F01F2522E3F20095B647 /* JRAudioQueuePlayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = JRAudioQueuePlayer.mm; sourceTree = "<group>"; };
 		31BB6D2B251DE66700C0F313 /* JRLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31BB6D2E251DE66700C0F313 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		31BB6D2F251DE66700C0F313 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -848,6 +868,8 @@
 				3158EFE62521CF700095B647 /* JRVideoDecoder.h */,
 				3158EFDD2521CF020095B647 /* JRFFmpegVideoDecoder.h */,
 				3158EFDE2521CF020095B647 /* JRFFmpegVideoDecoder.m */,
+				3158EFFF2522D3200095B647 /* JRSortFrameHandler.h */,
+				3158F0002522D3200095B647 /* JRSortFrameHandler.mm */,
 				3158EFE22521CF620095B647 /* JRHardwareVideoDecoder.h */,
 				3158EFE32521CF620095B647 /* JRHardwareVideoDecoder.mm */,
 			);
@@ -872,6 +894,38 @@
 				3158EFEC2521D9A20095B647 /* JRLivePlayerTypes.m */,
 			);
 			path = types;
+			sourceTree = "<group>";
+		};
+		3158F0042522D5E40095B647 /* video */ = {
+			isa = PBXGroup;
+			children = (
+				3158F0072522D66D0095B647 /* JRPlayerView.h */,
+				3158F0082522D66D0095B647 /* JRPlayerView.m */,
+				3158F0052522D5F30095B647 /* resource */,
+			);
+			path = video;
+			sourceTree = "<group>";
+		};
+		3158F0052522D5F30095B647 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				3158F00E2522DBB70095B647 /* JRPreviewNV12Shader.fsh */,
+				3158F00C2522DBB70095B647 /* JRPreviewNV12Shader.vsh */,
+				3158F00D2522DBB70095B647 /* JRPreviewRGBShader.fsh */,
+				3158F00F2522DBB70095B647 /* JRPreviewRGBShader.vsh */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		3158F0062522D60B0095B647 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				3158F0192522DD000095B647 /* JRQueueProcess.h */,
+				3158F01A2522DD000095B647 /* JRQueueProcess.mm */,
+				3158F01E2522E3F20095B647 /* JRAudioQueuePlayer.h */,
+				3158F01F2522E3F20095B647 /* JRAudioQueuePlayer.mm */,
+			);
+			path = audio;
 			sourceTree = "<group>";
 		};
 		31BB6D22251DE66700C0F313 = {
@@ -1654,6 +1708,8 @@
 		31BB702B251DF4C400C0F313 /* render */ = {
 			isa = PBXGroup;
 			children = (
+				3158F0042522D5E40095B647 /* video */,
+				3158F0062522D60B0095B647 /* audio */,
 			);
 			path = render;
 			sourceTree = "<group>";
@@ -1741,8 +1797,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				31BB6D3E251DE66900C0F313 /* LaunchScreen.storyboard in Resources */,
+				3158F0122522DBB70095B647 /* JRPreviewNV12Shader.fsh in Resources */,
 				31BB6D3B251DE66900C0F313 /* Assets.xcassets in Resources */,
+				3158F0112522DBB70095B647 /* JRPreviewRGBShader.fsh in Resources */,
 				31BB6D39251DE66700C0F313 /* Main.storyboard in Resources */,
+				3158F0132522DBB70095B647 /* JRPreviewRGBShader.vsh in Resources */,
+				3158F0102522DBB70095B647 /* JRPreviewNV12Shader.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1817,6 +1877,7 @@
 				31BB6F78251DE6CD00C0F313 /* GPUImageHardLightBlendFilter.m in Sources */,
 				31BB6FB0251DE6CD00C0F313 /* GPUImageColorConversion.m in Sources */,
 				31BB6FBE251DE6CD00C0F313 /* GPUImageRGBOpeningFilter.m in Sources */,
+				3158F01B2522DD000095B647 /* JRQueueProcess.mm in Sources */,
 				31BB6FD3251DE6CD00C0F313 /* GPUImageTextureOutput.m in Sources */,
 				31BB6FF3251DE6CD00C0F313 /* parseurl.c in Sources */,
 				31BB6F6D251DE6CD00C0F313 /* GPUImageHistogramGenerator.m in Sources */,
@@ -1846,6 +1907,7 @@
 				31BB6FC5251DE6CD00C0F313 /* GPUImageMotionDetector.m in Sources */,
 				31BB6FEE251DE6CD00C0F313 /* GPUImageDarkenBlendFilter.m in Sources */,
 				31BB6F97251DE6CD00C0F313 /* GPUImageLaplacianFilter.m in Sources */,
+				3158F0202522E3F20095B647 /* JRAudioQueuePlayer.mm in Sources */,
 				31BB6F72251DE6CD00C0F313 /* GPUImageOverlayBlendFilter.m in Sources */,
 				31BB6F56251DE6CD00C0F313 /* GPUImageTwoInputFilter.m in Sources */,
 				31BB6F94251DE6CD00C0F313 /* GPUImageXYDerivativeFilter.m in Sources */,
@@ -1887,6 +1949,7 @@
 				31BB6F7E251DE6CD00C0F313 /* GPUImageDissolveBlendFilter.m in Sources */,
 				31BB6FB7251DE6CD00C0F313 /* GPUImageSmoothToonFilter.m in Sources */,
 				3158EFDF2521CF020095B647 /* JRFFmpegVideoDecoder.m in Sources */,
+				3158F0012522D3200095B647 /* JRSortFrameHandler.mm in Sources */,
 				31BB6FB6251DE6CD00C0F313 /* GPUImageColorLocalBinaryPatternFilter.m in Sources */,
 				31BB705E25203AEE00C0F313 /* JRLiveStreamInfo.m in Sources */,
 				31BB6FC7251DE6CD00C0F313 /* GPUImageDirectionalNonMaximumSuppressionFilter.m in Sources */,
@@ -1982,6 +2045,7 @@
 				31BB6F59251DE6CD00C0F313 /* GPUImageGrayscaleFilter.m in Sources */,
 				31BB6F88251DE6CD00C0F313 /* GPUImageLineGenerator.m in Sources */,
 				31BB6FF2251DE6CD00C0F313 /* error.c in Sources */,
+				3158F0092522D66D0095B647 /* JRPlayerView.m in Sources */,
 				3158EFB325209D7D0095B647 /* JRLivePreview.m in Sources */,
 				31BB6FCE251DE6CD00C0F313 /* GPUImageGlassSphereFilter.m in Sources */,
 				31BB6FDD251DE6CD00C0F313 /* GPUImageKuwaharaFilter.m in Sources */,

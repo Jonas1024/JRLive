@@ -6,6 +6,7 @@
 //
 
 #import "JRLivePlayer.h"
+int kJRBufferSize = 4096;
 
 @implementation JRLivePlayer
 

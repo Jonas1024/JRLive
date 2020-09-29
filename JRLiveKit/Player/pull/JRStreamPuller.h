@@ -23,8 +23,6 @@ extern "C" {
 #endif
 
 
-
-
 @class JRStreamPuller;
 
 @protocol JRStreamPullerDelegate <NSObject>

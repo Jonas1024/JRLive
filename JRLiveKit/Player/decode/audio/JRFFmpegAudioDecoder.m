@@ -88,7 +88,7 @@ static int DecodeGetAVStreamFPSTimeBase(AVStream *st) {
                           audioStreamIndex:m_audioStreamIndex];
 }
 
-- (void)stopDecoder
+- (void)stop
 {
     m_isFirstFrame   = YES;
     [self freeAllResources];
@@ -150,8 +150,8 @@ static int DecodeGetAVStreamFPSTimeBase(AVStream *st) {
             swr_convert(au_convert_ctx, &out_buffer, out_linesize, (const uint8_t **)audioFrame->data , audioFrame->nb_samples);
             swr_free(&au_convert_ctx);
             au_convert_ctx = NULL;
-            if ([self.delegate respondsToSelector:@selector(decoder:data:size:pts:isFirstFrame:)]) {
-                [self.delegate decoder:self data:out_buffer size:out_buffer_size pts:ptsSec isFirstFrame:m_isFirstFrame];
+            if ([self.delegate respondsToSelector:@selector(audioDecoder:data:size:pts:isFirstFrame:)]) {
+                [self.delegate audioDecoder:self data:out_buffer size:out_buffer_size pts:ptsSec isFirstFrame:m_isFirstFrame];
                 m_isFirstFrame=NO;
             }
             

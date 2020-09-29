@@ -108,8 +108,8 @@ static int DecodeGetAVStreamFPSTimeBase(AVStream *st) {
                                                                    withPresentationTimeStamp:presentationTimeStamp];
         
         if (sampleBufferRef) {
-            if ([self.delegate respondsToSelector:@selector(videoDecoder:didDecode:isFirstFrame:)]) {
-                [self.delegate videoDecoder:self didDecode:sampleBufferRef isFirstFrame:NO];
+            if ([self.delegate respondsToSelector:@selector(videoDecoder:didDecode:)]) {
+                [self.delegate videoDecoder:self didDecode:sampleBufferRef];
             }
             CFRelease(sampleBufferRef);
         }

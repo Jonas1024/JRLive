@@ -5,8 +5,7 @@
 //  Created by fan on 2020/9/28.
 //
 
-#import <Foundation/Foundation.h>
-#import "JRVideoDecoder.h"
+#import <AVFoundation/AVFoundation.h>
 
 // FFmpeg Header File
 #ifdef __cplusplus
@@ -26,9 +25,16 @@ extern "C" {
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class JRFFmpegVideoDecoder;
+@protocol JRFFmpegVideoDecoderDlegate <NSObject>
+
+- (void)videoDecoder:(JRFFmpegVideoDecoder *)decoder didDecode:(CMSampleBufferRef)sampleBuffer;
+
+@end
+
 @interface JRFFmpegVideoDecoder : NSObject
 
-@property (nonatomic, weak) id<VideoDecoderDelegate> delegate;
+@property (nonatomic, weak) id<JRFFmpegVideoDecoderDlegate> delegate;
 
 - (instancetype)initWithFormatContext:(AVFormatContext *)formatContext videoStreamIndex:(int)videoStreamIndex;
 

@@ -26,7 +26,7 @@ extern "C" {
 @class JRFFmpegAudioDecoder;
 @protocol JRFFmpegAudioDecoderDelegate <NSObject>
 
-- (void)decoder:(JRFFmpegAudioDecoder *)decoder data:(void *)data size:(int)size pts:(int64_t)pts isFirstFrame:(BOOL)isFirstFrame;
+- (void)audioDecoder:(JRFFmpegAudioDecoder *)decoder data:(void *)data size:(int)size pts:(int64_t)pts isFirstFrame:(BOOL)isFirstFrame;
 
 @end
 
@@ -36,7 +36,7 @@ extern "C" {
 
 - (instancetype)initWithFormatContext:(AVFormatContext *)formatContext audioStreamIndex:(int)audioStreamIndex;
 - (void)startDecodeAudioDataWithAVPacket:(AVPacket)packet;
-- (void)stopDecoder;
+- (void)stop;
 
 @end
 

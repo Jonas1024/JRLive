@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class JRHardwareAudioDecoder;
 @protocol JRHardwareAudioDecoderDelegate <NSObject>
 
-- (void)decoder:(JRHardwareAudioDecoder *)decoder destBufferList:(AudioBufferList *)destBufferList outputPackets:(UInt32)outputPackets outputPacketDescriptions:(AudioStreamPacketDescription *)outputPacketDescriptions;
+- (void)audioDecoder:(JRHardwareAudioDecoder *)decoder destBufferList:(AudioBufferList *)destBufferList outputPackets:(UInt32)outputPackets outputPacketDescriptions:(AudioStreamPacketDescription *)outputPacketDescriptions pts:(int64_t)pts;
 
 @end
 
@@ -43,10 +43,11 @@ NS_ASSUME_NONNULL_BEGIN
  @param sourceBufferSize source audio data size
  */
 - (void)decodeAudioWithSourceBuffer:(void *)sourceBuffer
-                   sourceBufferSize:(UInt32)sourceBufferSize;
+                   sourceBufferSize:(UInt32)sourceBufferSize
+                                pts:(int64_t)pts;
 
 
-- (void)freeDecoder;
+- (void)stop;
 
 @end
 

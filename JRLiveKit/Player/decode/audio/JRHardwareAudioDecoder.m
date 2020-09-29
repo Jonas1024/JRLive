@@ -60,16 +60,17 @@ OSStatus DecodeConverterComplexInputDataProc(AudioConverterRef              inAu
     return self;
 }
 
-- (void)decodeAudioWithSourceBuffer:(void *)sourceBuffer sourceBufferSize:(UInt32)sourceBufferSize
+- (void)decodeAudioWithSourceBuffer:(void *)sourceBuffer sourceBufferSize:(UInt32)sourceBufferSize pts:(int64_t)pts
 {
     [self decodeFormatByConverter:mAudioConverter
                      sourceBuffer:sourceBuffer
                  sourceBufferSize:sourceBufferSize
                      sourceFormat:mSourceFormat
-                             dest:mDestinationFormat];
+                             dest:mDestinationFormat
+                              pts:pts];
 }
 
-- (void)freeDecoder
+- (void)stop
 {
     if (mAudioConverter) {
         AudioConverterDispose(mAudioConverter);
@@ -77,7 +78,7 @@ OSStatus DecodeConverterComplexInputDataProc(AudioConverterRef              inAu
     }
 }
 
-- (void)decodeFormatByConverter:(AudioConverterRef)audioConverter sourceBuffer:(void *)sourceBuffer sourceBufferSize:(UInt32)sourceBufferSize sourceFormat:(AudioStreamBasicDescription)sourceFormat dest:(AudioStreamBasicDescription)destFormat
+- (void)decodeFormatByConverter:(AudioConverterRef)audioConverter sourceBuffer:(void *)sourceBuffer sourceBufferSize:(UInt32)sourceBufferSize sourceFormat:(AudioStreamBasicDescription)sourceFormat dest:(AudioStreamBasicDescription)destFormat pts:(int64_t)pts
 {
     // Note: audio convert must set 1024.
     UInt32 ioOutputDataPackets = kIOOutputDataPackets;
@@ -120,8 +121,8 @@ OSStatus DecodeConverterComplexInputDataProc(AudioConverterRef              inAu
             status = noErr;
         }
         
-        if ([self.delegate respondsToSelector:@selector(decoder:destBufferList:outputPackets:outputPacketDescriptions:)]) {
-            [self.delegate decoder:self destBufferList:&fillBufferList outputPackets:ioOutputDataPackets outputPacketDescriptions:&outputPacketDesc];
+        if ([self.delegate respondsToSelector:@selector(audioDecoder:destBufferList:outputPackets:outputPacketDescriptions:pts:)]) {
+            [self.delegate audioDecoder:self destBufferList:&fillBufferList outputPackets:ioOutputDataPackets outputPacketDescriptions:&outputPacketDesc pts:pts];
         }
     }
 }

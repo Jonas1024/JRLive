@@ -11,7 +11,7 @@
 		3158EFBA25209D950095B647 /* UIView+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3158EFB725209D950095B647 /* UIView+YYAdd.m */; };
 		3158EFBB25209D950095B647 /* UIControl+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3158EFB825209D950095B647 /* UIControl+YYAdd.m */; };
 		3158EFD125218C830095B647 /* JRStreamPuller.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3158EFCF25218C830095B647 /* JRStreamPuller.mm */; };
-		3158EFD92521CE460095B647 /* JRLivePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3158EFD82521CE460095B647 /* JRLivePlayer.m */; };
+		3158EFD92521CE460095B647 /* JRLivePlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3158EFD82521CE460095B647 /* JRLivePlayer.mm */; };
 		3158EFDF2521CF020095B647 /* JRFFmpegVideoDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3158EFDE2521CF020095B647 /* JRFFmpegVideoDecoder.m */; };
 		3158EFE42521CF620095B647 /* JRHardwareVideoDecoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3158EFE32521CF620095B647 /* JRHardwareVideoDecoder.mm */; };
 		3158EFED2521D9A20095B647 /* JRLivePlayerTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3158EFEC2521D9A20095B647 /* JRLivePlayerTypes.m */; };
@@ -255,12 +255,11 @@
 		3158EFCF25218C830095B647 /* JRStreamPuller.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JRStreamPuller.mm; sourceTree = "<group>"; };
 		3158EFD025218C830095B647 /* JRStreamPuller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRStreamPuller.h; sourceTree = "<group>"; };
 		3158EFD72521CE460095B647 /* JRLivePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRLivePlayer.h; sourceTree = "<group>"; };
-		3158EFD82521CE460095B647 /* JRLivePlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRLivePlayer.m; sourceTree = "<group>"; };
+		3158EFD82521CE460095B647 /* JRLivePlayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = JRLivePlayer.mm; sourceTree = "<group>"; };
 		3158EFDD2521CF020095B647 /* JRFFmpegVideoDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRFFmpegVideoDecoder.h; sourceTree = "<group>"; };
 		3158EFDE2521CF020095B647 /* JRFFmpegVideoDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRFFmpegVideoDecoder.m; sourceTree = "<group>"; };
 		3158EFE22521CF620095B647 /* JRHardwareVideoDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRHardwareVideoDecoder.h; sourceTree = "<group>"; };
 		3158EFE32521CF620095B647 /* JRHardwareVideoDecoder.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = JRHardwareVideoDecoder.mm; sourceTree = "<group>"; };
-		3158EFE62521CF700095B647 /* JRVideoDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRVideoDecoder.h; sourceTree = "<group>"; };
 		3158EFEB2521D9A20095B647 /* JRLivePlayerTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRLivePlayerTypes.h; sourceTree = "<group>"; };
 		3158EFEC2521D9A20095B647 /* JRLivePlayerTypes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRLivePlayerTypes.m; sourceTree = "<group>"; };
 		3158EFF32521E7110095B647 /* JRHardwareAudioDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRHardwareAudioDecoder.h; sourceTree = "<group>"; };
@@ -865,7 +864,6 @@
 		3158EFDB2521CEA00095B647 /* video */ = {
 			isa = PBXGroup;
 			children = (
-				3158EFE62521CF700095B647 /* JRVideoDecoder.h */,
 				3158EFDD2521CF020095B647 /* JRFFmpegVideoDecoder.h */,
 				3158EFDE2521CF020095B647 /* JRFFmpegVideoDecoder.m */,
 				3158EFFF2522D3200095B647 /* JRSortFrameHandler.h */,
@@ -1678,7 +1676,7 @@
 			isa = PBXGroup;
 			children = (
 				3158EFD72521CE460095B647 /* JRLivePlayer.h */,
-				3158EFD82521CE460095B647 /* JRLivePlayer.m */,
+				3158EFD82521CE460095B647 /* JRLivePlayer.mm */,
 				31BB7029251DF4A200C0F313 /* pull */,
 				31BB702A251DF4B000C0F313 /* decode */,
 				31BB702B251DF4C400C0F313 /* render */,
@@ -1864,7 +1862,7 @@
 				31BB6FE0251DE6CD00C0F313 /* GPUImageExposureFilter.m in Sources */,
 				31BB6FD6251DE6CD00C0F313 /* GPUImageAddBlendFilter.m in Sources */,
 				31BB6F5B251DE6CD00C0F313 /* GPUImageLevelsFilter.m in Sources */,
-				3158EFD92521CE460095B647 /* JRLivePlayer.m in Sources */,
+				3158EFD92521CE460095B647 /* JRLivePlayer.mm in Sources */,
 				31BB6FD2251DE6CD00C0F313 /* GPUImagePerlinNoiseFilter.m in Sources */,
 				31BB6F81251DE6CD00C0F313 /* GPUImageCropFilter.m in Sources */,
 				31BB7041251DFAC200C0F313 /* JRLiveVideoConfiguration.m in Sources */,
